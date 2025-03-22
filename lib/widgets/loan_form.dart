@@ -133,13 +133,13 @@ class _LoanFormState extends State<LoanForm> {
                   Slider.adaptive(
                     value: _loanPeriod.toDouble(),
                     min: 12,
-                    max: 60,
-                    divisions: 40,
+                    max: 48,
+                    divisions: 6,
                     label: '$_loanPeriod months',
                     activeColor: AppColors.secondaryColor,
                     onChanged: (double newValue) {
                       setState(() {
-                        _loanPeriod = ((newValue.floor() / 6).round() * 6);
+                        _loanPeriod = newValue.toInt();
                         _submitForm();
                       });
                     },
@@ -152,7 +152,7 @@ class _LoanFormState extends State<LoanForm> {
                           padding: EdgeInsets.only(left: 12),
                           child: Align(
                               alignment: Alignment.centerLeft,
-                              child: Text('6 months')),
+                              child: Text('12 months')),
                         ),
                       ),
                       Expanded(
@@ -160,7 +160,7 @@ class _LoanFormState extends State<LoanForm> {
                           padding: EdgeInsets.only(right: 12),
                           child: Align(
                             alignment: Alignment.centerRight,
-                            child: Text('60 months'),
+                            child: Text('48 months'),
                           ),
                         ),
                       )
