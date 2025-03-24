@@ -1,5 +1,7 @@
 # InBank Frontend
 
+## (The TICKET-101 validation is located [here](https://github.com/Eldern45/intern-decision-engine-backend))
+
 This project is a frontend application for the InBank loan application service.
 It is built using Flutter and communicates with the backend API to
 display loan options and handle loan applications.
